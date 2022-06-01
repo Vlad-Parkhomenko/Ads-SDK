@@ -3,7 +3,7 @@
 namespace AdsSdk.Media.Data
 {
 	[XmlRoot(ElementName = "VAST")]
-	public class VAST
+	public struct VAST
 	{
 		[XmlElement(ElementName = "Ad")]
 		public Ad Ad { get; set; }

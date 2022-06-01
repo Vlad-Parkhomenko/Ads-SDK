@@ -3,7 +3,7 @@
 namespace AdsSdk.Media.Data
 {
     [XmlRoot(ElementName = "Creative")]
-	public class Creative
+	public struct Creative
 	{
 		[XmlElement(ElementName = "Linear")]
 		public Linear Linear { get; set; }

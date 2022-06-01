@@ -3,7 +3,7 @@
 namespace AdsSdk.Media.Data
 {
     [XmlRoot(ElementName = "InLine")]
-	public class InLine
+	public struct InLine
 	{
 		[XmlElement(ElementName = "Error")]
 		public string Error { get; set; }
