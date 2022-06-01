@@ -20,6 +20,9 @@ namespace AdsSdk.Networking.Requests
             }
 
             var request = UnityWebRequest.Post(url, body);
+            request.uploadHandler.contentType = "application/json";
+            byte[] jsonBytes = new System.Text.UTF8Encoding().GetBytes(body);
+            request.uploadHandler = new UploadHandlerRaw(jsonBytes);
 
             return request;
         }
