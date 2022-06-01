@@ -58,11 +58,11 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://sayollo.nyc3.digitaloceanspaces.com/Covid4.webm
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8941ea3a1dc144480ea8f7ae6938dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 3043206943257380941}
 --- !u!1 &8643611712222188118
 GameObject:
   m_ObjectHideFlags: 0
