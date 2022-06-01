@@ -14,6 +14,12 @@ namespace AdsSdk.Networking
             RequestSender.Instance.SendRequest(request, successCallback, errorCallback);
         }
 
+        public void DownloadMedia(string url, Action<byte[]> successCallBack, Action errorCallback = null)
+        {
+            UnityWebRequest request = RequestCreator.CreateGetRequest(url);
+            RequestSender.Instance.SendRequest(request, successCallBack, errorCallback);
+        }
+
         public void SendPurchaseRequest(string body, Action<string> successCallback, Action errorCallback = null)
         {
             UnityWebRequest request = RequestCreator.CreatePostRequest($"{_BaseEndpoint}/v1/gcom/ad", body);

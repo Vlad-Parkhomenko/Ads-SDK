@@ -1,5 +1,6 @@
 ﻿using AdsSdk.Media.Data;
 using AdsSdk.Networking;
+using System;
 using System.IO;
 using System.Xml.Serialization;
 using UnityEngine;
@@ -28,6 +29,13 @@ namespace AdsSdk.Media
             _api.LoadMediaData(RetrieveVideoURL);
         }
 
+        public void LoadMedia(string url)
+        {
+            var uri = new Uri(url);
+            string path = Application.persistentDataPath + uri.LocalPath;
+            _api.DownloadMedia(url, data => SaveToDisk(data, path));
+        }
+
         private void RetrieveVideoURL(string xml)
         {
             Debug.Log(xml);
@@ -42,6 +50,13 @@ namespace AdsSdk.Media
 
             _player.url = vast.Ad.InLine.Creatives.Creative.Linear.MediaFiles.MediaFile;
             PlayVideo();
+
+            LoadMedia(_player.url);
+        }
+
+        private void SaveToDisk(byte[] data, string path)
+        {
+            File.WriteAllBytes(path, data);
         }
     }
 }
