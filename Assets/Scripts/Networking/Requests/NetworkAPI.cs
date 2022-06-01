@@ -6,7 +6,7 @@ namespace AdsSdk.Networking
 {
     public class NetworkAPI
     {
-        private const string _BaseEndpoint = " https://6u3td6zfza.execute-api.us-east-2.amazonaws.com/prod";
+        private const string _BaseEndpoint = "https://6u3td6zfza.execute-api.us-east-2.amazonaws.com/prod";
 
         public void LoadMediaData(Action<string> successCallback, Action errorCallback = null)
         {
