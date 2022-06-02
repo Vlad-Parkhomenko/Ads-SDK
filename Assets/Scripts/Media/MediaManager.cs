@@ -12,8 +12,6 @@ namespace AdsSdk.Media
     {
         [SerializeField] private VideoPlayer _player;
 
-        private NetworkAPI _api = new NetworkAPI();
-
         private void Start()
         {
             LoadMediaData();
@@ -26,14 +24,14 @@ namespace AdsSdk.Media
 
         private void LoadMediaData()
         {
-            _api.LoadMediaData(RetrieveVideoURL);
+            NetworkAPI.LoadMediaData(RetrieveVideoURL);
         }
 
         public void LoadMedia(string url)
         {
             var uri = new Uri(url);
             string path = Application.persistentDataPath + uri.LocalPath;
-            _api.DownloadMedia(url, data => SaveToDisk(data, path));
+            NetworkAPI.DownloadMedia(url, data => SaveToDisk(data, path));
         }
 
         private void RetrieveVideoURL(string xml)
