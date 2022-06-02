@@ -1,4 +1,5 @@
 ﻿using AdsSdk.Networking;
+using AdsSdk.Purchases.Data;
 using UnityEngine;
 
 namespace AdsSdk.Purchases
@@ -18,7 +19,7 @@ namespace AdsSdk.Purchases
 
         private void HandlePurchaseData(string json)
         {
-            Debug.Log(json);
+            ProductData productData = ProductData.FromJson(json);
         }
     }
 }
