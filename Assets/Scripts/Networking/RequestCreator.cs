@@ -1,7 +1,8 @@
 ﻿using System;
+
 using UnityEngine.Networking;
 
-namespace AdsSdk.Networking.Requests
+namespace AdsSdk.Networking
 {
     public static class RequestCreator
     {

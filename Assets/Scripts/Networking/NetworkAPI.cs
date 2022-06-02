@@ -1,7 +1,8 @@
-﻿using AdsSdk.Networking.Requests;
-using AdsSdk.Purchases.Data;
-using System;
+﻿using System;
+
 using UnityEngine.Networking;
+
+using AdsSdk.Purchases.Data;
 
 namespace AdsSdk.Networking
 {
