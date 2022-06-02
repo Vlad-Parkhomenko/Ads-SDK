@@ -9,6 +9,11 @@ namespace AdsSdk.Purchases.Data
 {
     public struct ProductData
     {
+        private const string _IdKey = "item_id";
+        private const string _ItemNameKey = "item_name";
+        private const string _ItemImageKey = "item_image";
+        private const string _CurrencySignKey = "currency_sign";
+
         public string itemId;
         public string title;
         public string itemName;
@@ -23,15 +28,15 @@ namespace AdsSdk.Purchases.Data
 
             var productData = new ProductData
             {
-                itemId = data["item_id"].ToString(),
-                title = data["title"].ToString(),
-                itemName = data["item_name"].ToString(),
-                imageLink = data["item_image"].ToString(),
-                price = float.Parse(data["price"].ToString()),
-                currencySign = data["currency_sign"].ToString(),
+                itemId = data[_IdKey].ToString(),
+                title = data[nameof(title)].ToString(),
+                itemName = data[_ItemNameKey].ToString(),
+                imageLink = data[_ItemImageKey].ToString(),
+                price = float.Parse(data[nameof(price)].ToString()),
+                currencySign = data[_CurrencySignKey].ToString(),
             };
 
-            string currencyString = data["currency"].ToString();
+            string currencyString = data[nameof(currency)].ToString();
             
             if(!Enum.TryParse(currencyString, out productData.currency))
             {

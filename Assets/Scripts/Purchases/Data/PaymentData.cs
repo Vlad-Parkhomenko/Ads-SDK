@@ -14,9 +14,9 @@ namespace AdsSdk.Purchases.Data
         {
             var jsonData = new JsonData
             {
-                ["email"] = Email,
-                ["card_number"] = CardNumber,
-                ["expiration_date"] = ExpirationDate.ToString("MM/yyyy")
+                [nameof(Email)] = Email,
+                [nameof(CardNumber)] = CardNumber,
+                [nameof(ExpirationDate)] = ExpirationDate.ToString("MM/yyyy")
             };
 
             string json = jsonData.ToJson();
