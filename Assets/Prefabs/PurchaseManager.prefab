@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6551588666182955813}
   - component: {fileID: 2083956979662455979}
   - component: {fileID: 7984090907827417286}
+  - component: {fileID: 7159521650471899767}
   m_Layer: 0
   m_Name: EmailField
   m_TagString: Untagged
@@ -141,6 +142,18 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+--- !u!114 &7159521650471899767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6306450990788529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef20930621d8a24cbe9483add778d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &169891800304011264
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,9 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093a1349eb793a240b5183d76f05551b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _email: {fileID: 7984090907827417286}
-  _creditCardNumber: {fileID: 5842283288549741461}
-  _cardExpirationDate: {fileID: 5102387477353875492}
+  _email: {fileID: 7159521650471899767}
+  _cardNumber: {fileID: 2897002201698374017}
+  _cardExpirationDate: {fileID: 241246584542390816}
   _confirm: {fileID: 6143594843565011812}
 --- !u!1 &546494987993246234
 GameObject:
@@ -207,6 +220,7 @@ GameObject:
   - component: {fileID: 4676026314251544980}
   - component: {fileID: 986187889759407809}
   - component: {fileID: 5102387477353875492}
+  - component: {fileID: 241246584542390816}
   m_Layer: 0
   m_Name: ExpirationDateField
   m_TagString: Untagged
@@ -336,6 +350,19 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+--- !u!114 &241246584542390816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546494987993246234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61737c9f2bc83c34c816005207f088c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dateFormat: MM/yyyy
 --- !u!1 &1231826091293733045
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +432,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 885105416429688011}
   m_TextComponent: {fileID: 5289089731164846084}
   m_materialReferenceIndex: 1
@@ -811,8 +838,9 @@ GameObject:
   - component: {fileID: 158355536113928357}
   - component: {fileID: 8767449794161138793}
   - component: {fileID: 5842283288549741461}
+  - component: {fileID: 2897002201698374017}
   m_Layer: 0
-  m_Name: CreditCardField
+  m_Name: CardNumberField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,7 +954,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 1
-  m_CharacterLimit: 0
+  m_CharacterLimit: 16
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -940,6 +968,18 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+--- !u!114 &2897002201698374017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883214417084559462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196383140ace41f4a9d4cccf15456e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3082922904282623903
 GameObject:
   m_ObjectHideFlags: 0
