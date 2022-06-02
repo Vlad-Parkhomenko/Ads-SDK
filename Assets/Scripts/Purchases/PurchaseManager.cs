@@ -1,5 +1,6 @@
 ﻿using AdsSdk.Networking;
 using AdsSdk.Purchases.Data;
+using AdsSdk.UI;
 using UnityEngine;
 
 namespace AdsSdk.Purchases
@@ -7,19 +8,19 @@ namespace AdsSdk.Purchases
     public class PurchaseManager : MonoBehaviour
     {
         [SerializeField] private GameObject _productInfoPanel;
-
-        private NetworkAPI _api = new NetworkAPI();
+        [SerializeField] private PurchaseView _purchaseView;
 
         private void Start()
         {
             var obj = new { id = 1 };
             string json = JsonUtility.ToJson(obj);
-            _api.SendPurchaseRequest(json, HandlePurchaseData);
+            NetworkAPI.SendPurchaseRequest(json, HandlePurchaseData);
         }
 
         private void HandlePurchaseData(string json)
         {
             ProductData productData = ProductData.FromJson(json);
+            _purchaseView.DisplayProduct(productData);
         }
     }
 }
