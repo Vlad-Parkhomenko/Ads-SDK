@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6551588666182955813}
   - component: {fileID: 2083956979662455979}
   - component: {fileID: 7984090907827417286}
-  - component: {fileID: 4370003166658933149}
   m_Layer: 0
   m_Name: EmailField
   m_TagString: Untagged
@@ -142,18 +141,6 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
---- !u!114 &4370003166658933149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6306450990788529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fef20930621d8a24cbe9483add778d65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &169891800304011264
 GameObject:
   m_ObjectHideFlags: 0
