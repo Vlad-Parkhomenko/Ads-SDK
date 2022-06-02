@@ -1,5 +1,6 @@
-﻿using LitJson;
-using System;
+﻿using System;
+
+using LitJson;
 
 namespace AdsSdk.Purchases.Data
 {

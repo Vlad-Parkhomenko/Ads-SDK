@@ -1,22 +1,25 @@
-﻿using AdsSdk.Networking;
+﻿using UnityEngine;
+
+using AdsSdk.Networking;
 using AdsSdk.Purchases.Data;
 using AdsSdk.UI;
-using UnityEngine;
 
 namespace AdsSdk.Purchases
 {
     public class PurchaseManager : MonoBehaviour
     {
-        [SerializeField] private GameObject _productInfoPanel;
         [SerializeField] private PurchaseView _purchaseView;
         [SerializeField] private PaymentView _paymentView;
 
         private void Start()
         {
-            var obj = new { id = 1 };
-            string json = JsonUtility.ToJson(obj);
-            NetworkAPI.SendPurchaseRequest(json, HandlePurchaseData);
             _paymentView.PurchaseDataCollected += ConfirmPurchase;
+            LoadPurchaseData();
+        }
+
+        public void LoadPurchaseData()
+        {
+            NetworkAPI.SendPurchaseRequest("{}", HandlePurchaseData);
         }
 
         private void HandlePurchaseData(string json)

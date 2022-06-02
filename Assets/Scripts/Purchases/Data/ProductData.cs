@@ -1,9 +1,9 @@
-﻿using AdsSdk.Purchases.Enums;
+﻿using System;
+
 using LitJson;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+using AdsSdk.Purchases.Enums;
 
 namespace AdsSdk.Purchases.Data
 {
