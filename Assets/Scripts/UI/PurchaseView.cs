@@ -1,7 +1,6 @@
 ﻿using AdsSdk.Networking;
 using AdsSdk.Purchases.Data;
 using AdsSdk.Utils;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,9 +8,9 @@ namespace AdsSdk.UI
 {
     public class PurchaseView : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _title;
-        [SerializeField] private TMP_Text _name;
-        [SerializeField] private TMP_Text _price;
+        [SerializeField] private Text _title;
+        [SerializeField] private Text _name;
+        [SerializeField] private Text _price;
         [SerializeField] private Image _productImage;
         [SerializeField] private Button _confirm;
 
