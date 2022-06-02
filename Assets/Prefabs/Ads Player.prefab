@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3043206943257380940}
   - component: {fileID: 3043206943257380941}
-  - component: {fileID: 4788737835652520662}
+  - component: {fileID: 8292376045723068049}
   m_Layer: 0
   m_Name: Ads Player
   m_TagString: Untagged
@@ -67,7 +67,7 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
---- !u!114 &4788737835652520662
+--- !u!114 &8292376045723068049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3043206943257380942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8941ea3a1dc144480ea8f7ae6938dc, type: 3}
+  m_Script: {fileID: 11500000, guid: b0698b1a69138264b97d20cd1862b4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 3043206943257380941}

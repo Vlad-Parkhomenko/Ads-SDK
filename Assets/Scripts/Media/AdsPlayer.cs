@@ -1,14 +1,16 @@
-﻿using AdsSdk.Media.Data;
-using AdsSdk.Networking;
-using System;
+﻿using System;
 using System.IO;
 using System.Xml.Serialization;
+
 using UnityEngine;
 using UnityEngine.Video;
 
+using AdsSdk.Media.Data;
+using AdsSdk.Networking;
+
 namespace AdsSdk.Media
 {
-    public class MediaManager : MonoBehaviour
+    public class AdsPlayer : MonoBehaviour
     {
         [SerializeField] private VideoPlayer _player;
 
@@ -36,8 +38,6 @@ namespace AdsSdk.Media
 
         private void RetrieveVideoURL(string xml)
         {
-            Debug.Log(xml);
-
             var serializer = new XmlSerializer(typeof(VAST));
 
             VAST vast;
