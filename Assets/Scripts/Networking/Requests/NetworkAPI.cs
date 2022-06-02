@@ -1,4 +1,5 @@
 ﻿using AdsSdk.Networking.Requests;
+using AdsSdk.Purchases.Data;
 using System;
 using UnityEngine.Networking;
 
@@ -26,9 +27,9 @@ namespace AdsSdk.Networking
             RequestSender.Instance.SendRequest(request, successCallback, errorCallback);
         }
 
-        public static void SendPurchaseConfirmationRequest(string body, Action<string> successCallback, Action errorCallback = null)
+        public static void SendPurchaseConfirmationRequest(PaymentData paymentData, Action<string> successCallback, Action errorCallback = null)
         {
-            UnityWebRequest request = RequestCreator.CreatePostRequest($"{_BaseEndpoint}/v1/gcom/action", body);
+            UnityWebRequest request = RequestCreator.CreatePostRequest($"{_BaseEndpoint}/v1/gcom/action", paymentData.ToJson());
             RequestSender.Instance.SendRequest(request, successCallback, errorCallback);
         }
     }
