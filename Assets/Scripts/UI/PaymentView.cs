@@ -1,10 +1,12 @@
-﻿using AdsSdk.Purchases.Data;
-using AdsSdk.UI.Validation;
-using System;
+﻿using System;
 using System.Globalization;
 using System.Linq;
+
 using UnityEngine;
 using UnityEngine.UI;
+
+using AdsSdk.Purchases.Data;
+using AdsSdk.UI.Validation;
 
 namespace AdsSdk.UI
 {
@@ -44,19 +46,6 @@ namespace AdsSdk.UI
 
         private bool IsValid()
         {
-            /*if (!_email.IsValid())
-            {
-                return false;
-            }
-            if (!_cardNumber.IsValid())
-            {
-                return false;
-            }
-            if (!_cardExpirationDate.IsValid())
-            {
-                return false;
-            }*/
-
             return _validators.All(validator => validator.IsValid());
         }
     }

@@ -1,8 +1,9 @@
-﻿using AdsSdk.Networking;
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+using AdsSdk.Networking;
 using AdsSdk.Purchases.Data;
 using AdsSdk.Utils;
-using UnityEngine;
-using UnityEngine.UI;
 
 namespace AdsSdk.UI
 {

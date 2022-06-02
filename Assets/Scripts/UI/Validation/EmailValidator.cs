@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
+
+using UnityEngine;
 
 namespace AdsSdk.UI.Validation
 {
