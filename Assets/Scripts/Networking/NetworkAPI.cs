@@ -3,6 +3,7 @@
 using UnityEngine.Networking;
 
 using AdsSdk.Purchases.Data;
+using UnityEngine;
 
 namespace AdsSdk.Networking
 {
@@ -12,6 +13,12 @@ namespace AdsSdk.Networking
         private const string _MediaDataEndpoint = "ad/vast";
         private const string _PurchaseRequestEndpoint = "v1/gcom/ad";
         private const string _PurchaseConfirmationEndpoint = "v1/gcom/action";
+
+        static NetworkAPI()
+        {
+            RequestSender requestSender = Resources.Load<RequestSender>(nameof(RequestSender));
+            UnityEngine.Object.Instantiate(requestSender);
+        }
 
         public static void LoadMediaData(Action<string> successCallback, Action errorCallback = null)
         {
