@@ -29,7 +29,7 @@ namespace AdsSdk.Media
             NetworkAPI.LoadMediaData(RetrieveVideoURL);
         }
 
-        public void LoadMedia(string url)
+        private void LoadMedia(string url)
         {
             var uri = new Uri(url);
             string path = Application.persistentDataPath + uri.LocalPath;
