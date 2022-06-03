@@ -1,7 +1,7 @@
 # **Ads-SDK**
 
 ## **General**
-To use the package, download AdsSdk.unitypackage in Release and import it into the project. Required tools are in Prefabs folder. Usage demos are in Samples folder.
+To use the package, download AdsSdk.unitypackage in Releases and import it into the project. Required tools are in Prefabs folder. Usage demos are in Samples folder.
 
 ### **NetworkAPI**
 Utility class for sending requests to the backend in convenint way.
